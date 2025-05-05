@@ -1,3 +1,12 @@
-# Exemplos utilizados na live: Como Consumir APIs? Uma Jornada para Iniciantes
+# Materiais de lives
 
-Nesse repositório, você encontrará exemplos utilizados na live. Utilize eles para praticar e aprender mais sobre como consumir APIs.
+Olá pessoas!
+
+Aqui você encontra os materiais relacionados com as lives que aconteceram no canal da Twitch.
+
+| Nome da Pasta       | Título da Live                     |
+|---------------------|-------------------------------------|
+| `jan_2025` | ... |
+| `fev_2025` | ... |
+| `mar_2025` | ... |
+| `abr_2025` | Git init - Uma introdução aos comandos básicos do Git |
