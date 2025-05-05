@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página da live</title>
+</head>
+<body>
+    <h1>
+        Essa é a página da nossa Live! 
+    </h1>
+
+    <p class="main-content">
+        Boas vindas à página da nossa live! Cada etapa criada aqui pode ser reproduzida por você, atenção aos comandos utilizados e a ordem deles.
+    </p>
+    <p class="main-content">
+        Os primeiros comandos foram na etapa de configuração, depois de feito não há necessidade de refaze-lo, a não ser que queira mudar as configurações. <br>
+        (Configuração de usuária)<br>
+        git config --global user.name Digite seu nome<br>
+        git config --global user.email Digite seu email<br>
+        (Configuração da Branch inicial)<br>
+        git config --global init.defaultBranch main <br>
+    </p>
+    <p class="main-content">
+        A próxima etapa será iniciar esse projeto no Git, com o comando:<br>
+        git init<br>
+        Veja que seu terminal alterou! Veja na pasta do projeto (arquivos ocultos) que uma pasta .git foi criada também.<br>
+        Agora você pode começar a salvar as alterações do seu código.<br><br>
+        <i>**Sempre que algum comando não funcionar, verifique no terminal qual erro ocorreu, pode ser algum comando digitado errado ou algum erro de sintaxe no código.</i><br>
+    </p>
+    <p class="main-content">
+        Vamos utilizar os comandos para salvar a primeira versão desse código, sem fazer alterações ainda.<br>
+        Pense que você está organizando documentos em caixa, a primeira etapa será colocar os documentos na caixa, então use os comandos:<br>
+        (Para verificar todos os documentos alterados)<br>
+        git status<br>
+        (Para adicionar todos documentos na caixa)<br>
+        git add .<br>
+    </p>
+    <p class="main-content">
+        Agora que você já adicionou os documentos na caixa, adicione uma etiqueta na caixa, para lembrar o que foi colocado dentro:<br>
+        (Para atiquetar a caixa)<br>
+        git commit -m "Adicionei o projeto inicial"<br>
+    </p>
+    <p class="main-content">
+        Você pode verificar o histórico do que foi adicionado na caixa e informações de quem etiquetou, com o comando:<br>
+        git log<br>
+    </p>
+    <p class="main-content">
+        Agora que você já tem a primeira versão do seu projeto, vamos executar as duas tarefas vistas na apresentação.<br>
+            • Alterar paleta de cores <br>
+            • Adicionar formulário de inscrição <br>
+        Para cada tarefa, você irá criar uma nova branch, para que o projeto principal não seja afetado.<br>
+        Vamos dar o nome de "cores" e "form" para as branch.<br>
+        (Para criar uma nova branch)<br>
+        git branch cores<br>
+        git branch form<br>
+        Note que ambas são cópias da branch main
+    </p>
+    <p class="main-content">
+        Você pode verificar todas as branches existentes e alternar entre elas:<br>
+        (Para ver a lista de branches)<br>
+        git branch<br>
+        (Para alternar entre as branches)<br>
+        git checkout cores<br>
+    </p>
+    <p class="main-content">
+        Veja no terminal que você está na branch cores, faça as alterações necessárias no código para essa tarefa e salve novamente, como nos comandos que aprendemos anteriormente.<br>
+        Para essa tarefa, vá até o arquivo styles.css e altere as cores conforme goste.<br>
+        <i>**Lembre-se de organizar os documentos na caixa e etiquetar a caixa, para não perder o que foi feito.</i><br>
+        (Para verificar todos os documentos alterados)<br>
+        git status<br>
+        (Para adicionar todos documentos na caixa)<br>
+        git add .<br>
+        (Para atiquetar a caixa)<br>
+        git commit -m "Alterei a paleta de cores"<br>
+        (Para ver o histórico)<br>
+        git log<br>
+    </p>
+    <p class="main-content">
+        Com essa tarefa finalizada, faça a próxima tarefa, que é adicionar o formulário de inscrição.<br>
+        (Para alternar de branch)<br>
+        git checkout form<br>
+        No arquivo index.html, adicione o código do formulário de inscrição ao final da página.<br>
+        ```< form><br>
+            < label for="name">Nome:</label><br>
+            < input type="text" id="name" name="name"><br>
+            < label for="email">Email:</label><br>
+            < input type="email" id="email" name="email"><br>
+            < input type="submit" value="Enviar"><br>
+        < /form>```<br>
+        <i>**Lembre-se de organizar os documentos na caixa e etiquetar a caixa, para não perder o que foi feito.</i><br>
+        (Para verificar todos os documentos alterados)<br>
+        git status<br>
+        (Para adicionar todos documentos na caixa)<br>
+        git add .<br>
+        (Para atiquetar a caixa)<br>
+        git commit -m "Adicionei o formulário de inscrição"<br>
+        (Para ver o histórico)<br>
+        git log<br>
+
+        <i>** Se o histórico estiver grande, pode precisar usar o comando :q para sair do log no terminal.</i><br>
+             </i>
+    </p>
+    <p class="main-content">
+        Finalizadas as duas tarefas, volte para a branch main e veja o que acontece.<br>
+        (Para voltar para a branch principal)<br>
+        git checkout main<br>
+    </p>
+    <p class="main-content">
+        Veja que o código não está atualizado, pois você ainda não fez o merge das branches cores e form com a branch main.<br>
+        (Para fazer o merge)<br>
+        git merge cores<br>
+        git merge form<br>
+        (Para ver o histórico)<br>
+        git log<br>
+    </p>
+    <p class="main-content">
+        Com o código atualizado, você pode conectar com um repositório remoto.<br>
+        Vamos usar o GitHub como exemplo, mas você pode usar qualquer outro repositório remoto.<br>
+        Precisamos criar um repositório remoto, para isso, entre no GitHub e crie um repositório com o nome do projeto.<br>
+        Depois de criar o repositório, copie o link do repositório remoto.<br>
+        (Para conectar o repositório local com o remoto)<br>
+        git remote add origin link<br>
+        (Para verificar se o repositório remoto foi adicionado)<br>
+        git remote -v<br>
+        (Para enviar o código para o repositório remoto)<br>
+        git push -u origin main<br>
+
+        <i>** Se for a primeira vez conectando com o GitHub, pode precisar de algumas etapas de autenticação.</i><br>
+    </p>
+    <p class="main-content">
+        Pronto, nosso código está pronto para ser distribuido e outras pessoas podem contribuir com o projeto.<br>
+        Faça um teste com esse repositório, faça um clone do repositório remoto para você e faça suas alterações.<br>
+        Crie uma pasta de projetos, utilize o comando:<br>
+        (Para clonar o repositório remoto)<br>
+        git clone https://github.com/bugelseif/site-live.git<br>
+        (Para entrar na pasta do projeto)<br>
+        cd site-live<br>
+        (Para criar uma nova branch)<br>
+        git branch seu_nome<br>
+        (Para alternar entre as branches)<br>
+        git checkout seu_nome<br>
+        <i>**Faça as alterações que desejar no código</i><br>
+        (Para verificar todos os documentos alterados)<br>
+        git status<br>
+        (Para adicionar todos documentos na caixa)<br>
+        git add .<br>
+        (Para atiquetar a caixa)<br>
+        git commit -m "Alterei as cores"<br>
+        (Para enviar o código para o repositório remoto)<br>
+        git push -u origin seu_nome<br>
+    </p>
+    <p class="main-content">
+        Agora você pode fazer um pull request no repositório remoto, para que o dono do repositório possa aceitar suas alterações.<br>
+        Entre no repositório remoto e clique em "Compare & pull request".<br>
+        Depois clique em "Create pull request".<br>
+    </p>
+    <p class="main-content">
+        Tem outro comando importante quando temos repositórios remotos e queremos atualizar o código, puxando as alterações do repositório remoto para o repositório local.<br>
+        (Para puxar as alterações do repositório remoto)<br>
+        git pull origin main<br>
+    </p>
+    <p class="main-content">
+        Agora você conhece os comandos básicos para trabalhar com git e conectar em repositórios remotos. <br>
+        Continue praticando!<br>
+    </p>
+
+    
+</body>
+</html>
